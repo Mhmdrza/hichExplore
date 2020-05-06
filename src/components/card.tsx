@@ -1,7 +1,6 @@
 import React from "react";
 import moment from "moment";
 import "./card.scss";
-import { parse } from "path";
 
 interface CardProps {
   date: string;
