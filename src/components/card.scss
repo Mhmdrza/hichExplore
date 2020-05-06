@@ -1,0 +1,69 @@
+$card-width: 16rem;
+$card-height: 10rem;
+
+.card {
+  display: flex;
+  width: $card-width;
+  box-shadow: -2px 13px 36px -17px rgba(0, 0, 0, 0.49);
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  &_meta {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_body {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #999;
+    // border: 2px solid red;
+    height: $card-height;
+    &_image {
+      height: 100%;
+      width: 100%;
+    }
+    &_home-info {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      align-items: flex-end;
+      width: 100%;
+      padding: 1rem;
+      padding-top: 2rem;
+      box-sizing: border-box;
+      color: white;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      &_price {
+        opacity: 0;
+        transition: opacity 200ms;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        > span {
+          display: flex;
+          margin: 0 1rem;
+          font-size: 0.8rem;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+      &:hover &_price {
+        opacity: 1;
+      }
+      &_details {
+        font-size: 0.8rem;
+        border: 2px solid red($color: #000000);
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
